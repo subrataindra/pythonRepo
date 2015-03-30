@@ -2,7 +2,6 @@ from flask.ext.migrate import Migrate, MigrateCommand
 from flask.ext.sqlalchemy import SQLAlchemy
 import os
 from flask import Flask,render_template
-from dbCreate import persons
 from flask.ext.wtf import Form
 from wtforms import SubmitField,StringField,HiddenField
 from wtforms.validators import Required
