@@ -2,9 +2,10 @@ from app import app, db,  mail
 from app.models import persons
 from app.forms import NameForm, addForm, addUserForm
 #from app.tree import Tree
-from flask import render_template, request, redirect, url_for, flash
+from flask import render_template, request, redirect, url_for, flash, session 
 #from flask.ext.admin.contrib import sqla
 from flask_mail import Message
+from flask.ext.session import Session
 
 
 @app.route('/all', methods=['GET','POST'])
