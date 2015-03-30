@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}{{ super() }}{% endblock %}
+
+{% block head %}{{ super() }} {% endblock %}
+
+{% block content %}
+{{ super() }}
+
+
+
+<table>
+<form method="POST">
+{{ ae.csrf_token }}
+<tr><td> <p> Name </td><td> <input type="text" name="name" id="name" value="{{ sel[0].name }}"> </p></td></tr>
+<tr><td> <p> Phone </td><td> <input type="text" name="phone" id="phone" value="{{ sel[0].phone }}" </p></td></tr>
+<tr><td> <p> Address </td><td> <input type="text" name="address" id="address" value="{{ sel[0].address}}" </p></td></tr>
+<tr><td> <p> {{ae.addUser}} </td><td> {{ae.cancel}} </p></td></tr>
+
+</form>
+</table>
+
+
+{% endblock %}
+
+
+
+
+

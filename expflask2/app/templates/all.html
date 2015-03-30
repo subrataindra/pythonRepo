@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+{{ super() }}
+
+<h4>All Users</h4>
+
+{% for item in all %}
+<p> {{item.name}} , {{item.address}}  , {{item.phone}} </p>
+
+</p>
+{% endfor %}
+
+{% endblock %}

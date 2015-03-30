@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+{{ super() }}
+
+
+
+<p>
+<form method=post>
+{{ adf.csrf_token }}
+	{{ adf.add }}
+</p>
+
+<table style="width:50%">
+  <tr>
+    <th>Name</th>
+    <th>Address</th> 
+    <th>Phone</th>
+	<th>Update</th>
+  </tr>
+
+{% for item in all %}
+  <tr>
+
+    <td>{{item.name}} </td>
+    <td>{{item.address}}</td> 
+    <td>{{item.phone}}</td>
+	<td>
+<form method=post>
+{{ x.csrf_token }}
+		<input type="hidden" name="fld1" value={{item.id}}>
+		{{ x.edit }}
+		{{ x.delete }}
+	</form>
+	</td>
+  </tr>
+{% endfor %}
+</table>
+
+{% endblock %}
+
+
+
+
+
+
+

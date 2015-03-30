@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}{{ super() }}{% endblock %}
+
+{% block head %}{{ super() }} {% endblock %}
+
+{% block content %}
+{{ super() }}
+
+<table>
+<form method="POST">
+{{ auf.csrf_token }}
+<tr><td> <p> Name </td><td> {{auf.name}} </p></td></tr>
+<tr><td> <p> Phone </td><td> {{auf.phone}} </p></td></tr>
+<tr><td> <p> Address </td><td>{{auf.address}} </p></td></tr>
+<tr><td> <p> {{auf.addUser}} </td><td>{{auf.cancel}} </p></td></tr>
+
+</form>
+</table>
+
+
+{% endblock %}
+
+
+
+
+
